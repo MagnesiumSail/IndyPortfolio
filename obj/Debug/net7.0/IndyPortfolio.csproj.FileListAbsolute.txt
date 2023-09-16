@@ -1,0 +1,15 @@
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.csproj.AssemblyReference.cache
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.AssemblyInfoInputs.cache
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.AssemblyInfo.cs
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.csproj.CoreCompileInputs.cache
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\bin\Debug\net7.0\IndyPortfolio.exe
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\bin\Debug\net7.0\IndyPortfolio.deps.json
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\bin\Debug\net7.0\IndyPortfolio.runtimeconfig.json
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\bin\Debug\net7.0\IndyPortfolio.dll
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\bin\Debug\net7.0\IndyPortfolio.pdb
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.dll
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\refint\IndyPortfolio.dll
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.pdb
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\IndyPortfolio.genruntimeconfig.cache
+C:\Users\leaps\Desktop\fall2023\AppliedPrograming\IndyPortfolio\obj\Debug\net7.0\ref\IndyPortfolio.dll
