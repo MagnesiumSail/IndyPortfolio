@@ -1,10 +1,10 @@
 # Overview
 
 Concept:
-This is a Peer-To-Peer network stack program in C#
+This program will print Hello World to the terminal
 
 Purpose:
-I am creating this software to teach myself about sending packets between programs, as well as a refresher for C#
+This program allows the program to communicate with the user.
 
 {Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
 
@@ -15,10 +15,9 @@ I am creating this software to teach myself about sending packets between progra
 Tools:
 Visual Code Studio
 
-This program is built in C#, and 
+This program is built in C#
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [ChatGPT](https://chat.openai.com/) - Reminded me of git commands
