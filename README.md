@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Ideas:
+Moon model in the center with options around it as you rotate with stars or smthn in the background and the portfolio options can rotate with the moon and mouse and you can zoom into the surfacegit remote set-url origin https://github.com/YourUsername/YourRepo.git
