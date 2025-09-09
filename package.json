@@ -1,0 +1,21 @@
+{
+  "name": "indy-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Project with Three.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "threejs",
+    "webgl",
+    "3d",
+    "javascript"
+  ],
+  "author": "Indy",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
