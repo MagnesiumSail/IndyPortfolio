@@ -6,21 +6,31 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
+
+type GLTFResult = {
+  nodes: {
+    Icosphere: THREE.Mesh
+  }
+  materials: {
+    [key: string]: THREE.Material
+  }
+}
+
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/starShape.glb')
-return (
+  const { nodes } = useGLTF('/starShape.glb') as unknown as GLTFResult
+  return (
     <group {...props} dispose={null}>
-        <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.Icosphere.geometry}
-            scale={2.366}
-            material-color="yellow"
-        >
-            <meshBasicMaterial color="yellow" side={THREE.DoubleSide} />
-        </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Icosphere.geometry}
+        scale={2.366}
+        material-color="yellow"
+      >
+        <meshLambertMaterial color="yellow" side={THREE.DoubleSide} />
+      </mesh>
     </group>
-)
+  )
 }
 
 useGLTF.preload('/starShape.glb')
