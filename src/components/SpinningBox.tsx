@@ -5,17 +5,10 @@ import { useMemo, useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
-function SpinningModel() {
-  const ref = useRef<THREE.Group>(null);
-  const matRef = useRef<THREE.ShaderMaterial>(null);
+//Almost anything in the Three.js docs can be used in R3F just by writing <ambientLight /> or <meshStandardMaterial /> instead of new THREE.AmbientLight()
 
-  const { phase, intensity } = useMemo(
-    () => ({
-      phase: Math.random() * Math.PI * 2,
-      intensity: 0.8 + Math.random() * 0.6
-    }),
-    []
-  );
+function SpinningModel() {
+  const ref = useRef<THREE.Group>(null!);
 
   const { axis, speed, q } = useMemo(() => {
     return {
@@ -25,16 +18,16 @@ function SpinningModel() {
         THREE.MathUtils.randFloat(-1, 1)
       ).normalize(),
       speed: THREE.MathUtils.randFloat(0.5, 2.0),
-      q: new THREE.Quaternion()
+      q: new THREE.Quaternion(),
     };
   }, []);
 
   useFrame((_, delta) => {
-    if (matRef.current) matRef.current.uniforms.uTime.value += delta;
     q.setFromAxisAngle(axis, speed * delta);
-    if (ref.current) ref.current.quaternion.multiply(q);
+    ref.current.quaternion.multiply(q);
   });
 
+  // random position on a sphere of radius 30
   const dir = new THREE.Vector3().randomDirection();
   const r = 30;
   const pos = dir.multiplyScalar(r);
@@ -43,33 +36,7 @@ function SpinningModel() {
   return (
     <mesh ref={ref} position={[pos.x, pos.y, pos.z]} scale={0.5}>
       <icosahedronGeometry args={[size, 0]} />
-      <shaderMaterial
-        ref={matRef}
-        // blending={THREE.AdditiveBlending}
-        // transparent
-        uniforms={{
-          uTime: { value: 0 },
-          uPhase: { value: phase },
-          uIntensity: { value: intensity },
-          uColor: { value: new THREE.Color("white") }
-        }}
-        vertexShader={/* gl_Position pass-through */ `
-          void main() {
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-          }
-        `}
-        fragmentShader={/* always red */ `
-          uniform float uTime;
-          uniform float uPhase;
-          uniform float uIntensity;
-          uniform vec3  uColor;
-
-          void main() {
-            // float tw = 0.5 + 0.5 * sin(uTime * 8.0 + uPhase);
-            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
-          }
-        `}
-      />
+      <meshStandardMaterial color="yellow" />
     </mesh>
   );
 }
