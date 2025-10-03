@@ -38,3 +38,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Ideas:
 Moon model in the center with options around it as you rotate with stars or smthn in the background and the portfolio options can rotate with the moon and mouse and you can zoom into the surfacegit remote set-url origin https://github.com/YourUsername/YourRepo.git
+
+
+TODO:
+star constellations
+twinkling star shader
+star change vertexs shader
+star light effects
+star particle field
+objects on moon
+moon material/color
+maybe different moon model
+selectables
+pan camera to stars behind camera for different projects menus or smthn
