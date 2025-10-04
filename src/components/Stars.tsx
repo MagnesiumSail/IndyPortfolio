@@ -13,12 +13,19 @@ type StarData = {
 function createStarData(radius: number): StarData {
   const dir = new THREE.Vector3().randomDirection();
   const pos = dir.multiplyScalar(radius);
-  const size = 0.1 + Math.random() * 1;
+  const size = 0.01 + Math.random() * 1.5;
   // Pick a random color from the list
-  const colorNames = ["yellow", "white", "orange", "red", "blue", "purple"];
-  const colorIndex = Math.floor(Math.random() * colorNames.length);
-  const color = new THREE.Color(colorNames[colorIndex]);
-  const brightness = 0.5 + Math.random() * 0.5 * size;
+  const starColors = [
+  "#ffe5b4", "#ffe5b4", "#ffe5b4", "#ffe5b4", "#ffe5b4", "#ffe5b4", "#ffe5b4", "#ffe5b4",
+  "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff",
+  "#ffd27f", "#ffd27f","#ffd27f","#ffd27f","#ffd27f","#ffd27f","#ffd27f","#ffd27f",
+  "#ff8c5a",
+  "#a8c5ff",
+  "#cfa7ff"
+];
+  const colorIndex = Math.floor(Math.random() * starColors.length);
+  const color = new THREE.Color(starColors[colorIndex]);
+  const brightness = 0. + Math.random() * 0.5 * size;
   return { position: [pos.x, pos.y, pos.z], scale: size, brightness, color };
 }
 
@@ -113,7 +120,7 @@ function Star({ data }: { data: StarData }) {
 
 export default function Stars({
   count = 200,
-  radius = 30,
+  radius = 300,
 }: {
   count?: number;
   radius?: number;

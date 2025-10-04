@@ -4,6 +4,7 @@ import { Model } from "./moonObjects";
 import CameraOrbit from "./CameraOrbit";
 import Stars from "./Stars";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { OrbitControls } from "@react-three/drei";
 
 export default function Scene() {
   return (
@@ -13,10 +14,10 @@ export default function Scene() {
         <ambientLight intensity={0.9} />
         <directionalLight position={[10, 5, -10]} intensity={1} />
         <Model />
-        <Stars count={200} radius={30} />
+        <Stars count={1200} radius={300} />
         <EffectComposer>
           <Bloom
-            intensity={1} // The bloom intensity.
+            intensity={0.6} // The bloom intensity.
             luminanceThreshold={0.5} // The luminance threshold. Raise this value to mask out darker elements in the scene.
             luminanceSmoothing={0.1} // Smoothness of the luminance threshold. Range is [0, 1].
             height={1000} // Render height, lower is faster.
@@ -35,6 +36,7 @@ export default function Scene() {
           invertScroll={false}
           smooth={{ mouse: 4, radius: 6 }}
         />
+        {/*<OrbitControls />*/}
       </Canvas>
     </div>
   );
