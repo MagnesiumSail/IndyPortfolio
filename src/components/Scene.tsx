@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Model } from "./moonObjects";
 import CameraOrbit from "./CameraOrbit";
 import Stars from "./Stars";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 export default function Scene() {
   return (
@@ -13,6 +14,15 @@ export default function Scene() {
         <directionalLight position={[10, 5, -10]} intensity={1} />
         <Model />
         <Stars count={200} radius={30} />
+        <EffectComposer>
+          <Bloom
+            intensity={1} // The bloom intensity.
+            luminanceThreshold={0.5} // The luminance threshold. Raise this value to mask out darker elements in the scene.
+            luminanceSmoothing={0.1} // Smoothness of the luminance threshold. Range is [0, 1].
+            height={1000} // Render height, lower is faster.
+            radius={0.6} // Bloom radius.
+          />
+        </EffectComposer>
         <CameraOrbit
           target={[0, 4, -3]}
           initialRadius={28}
