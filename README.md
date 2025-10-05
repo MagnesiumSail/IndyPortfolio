@@ -39,15 +39,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Ideas:
 Moon model in the center with options around it as you rotate with stars or smthn in the background and the portfolio options can rotate with the moon and mouse and you can zoom into the surfacegit remote set-url origin https://github.com/YourUsername/YourRepo.git
 
+"zelda's moon" (https://skfb.ly/os8Sv) by Ulises Alvarado 3d is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 TODO:
 star constellations
-twinkling star shader
-star change vertexs shader
-star light effects
-star particle field
-objects on moon
+maybe make stars a particle field
+(selectable) objects on moon
 moon material/color
-maybe different moon model
+maybe different moon model (prob not this thing is great)
 selectables
 pan camera to stars behind camera for different projects menus or smthn

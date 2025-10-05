@@ -86,8 +86,8 @@ export default function CameraOrbit({
     if (!cam.current) return;
 
     // pointer.x/y are in [-1, 1]; map to [0, 1]
-    const tXTarget = (1 - pointer.x) * 0.5;
-    const tYTarget = (1 - pointer.y) * 0.5;
+    const tXTarget = (1 + pointer.x) * 0.5;
+    const tYTarget = (1 + pointer.y) * 0.5;
 
     tX.current = damp(tX.current, tXTarget, smooth.mouse, delta);
     tY.current = damp(tY.current, tYTarget, smooth.mouse, delta);
