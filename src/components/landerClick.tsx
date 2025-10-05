@@ -2,8 +2,10 @@ import { Lander } from "./lander";
 import { useState, useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
 import { useCursor } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
-function OutlineShell({ children, scaleFactor = 1.06 }: { children: React.ReactNode; scaleFactor?: number }) {
+
+function OutlineShell({ children, scaleFactor = 1.03 }: { children: React.ReactNode; scaleFactor?: number }) {
   const ref = useRef<THREE.Group>(null!);
   useLayoutEffect(() => {
     const mat = new THREE.MeshBasicMaterial({
@@ -37,7 +39,31 @@ export function LanderClick() {
   const landerOffset: [number, number, number] = [0.0, 0.0, 0.0];  // move the lander relative to base
   const bubbleOffset: [number, number, number] = [0.0, -0.4, 0.0];  // move the bubble relative to base
   const landerScale = 0.3;
-  const bubbleRadius = 0.9; // how forgiving the hover is
+  const bubbleRadius = 0.9;
+
+  const animRef = useRef<THREE.Group>(null!);
+
+  const intensity = useRef(0);
+
+  useFrame((state, delta) => {
+    const target = hovered ? 1 : 0;
+    intensity.current += THREE.MathUtils.damp(intensity.current, target, 4, delta);
+
+    const t = state.clock.getElapsedTime();
+    const s = intensity.current;
+
+    if (animRef.current) {
+        animRef.current.position.y = landerOffset[1] + 0.03 * s * Math.sin(t * 6.0);
+
+        animRef.current.position.x = landerOffset[0] + 0.02 * s * Math.sin(t * 5.0);
+        animRef.current.position.z = landerOffset[2] + 0.02 * s * Math.cos(t * 4.0);
+
+        animRef.current.rotation.x = 0.06 * s * Math.sin(5.3 * t);
+        animRef.current.rotation.z = 0.05 * s * Math.cos(4.9 * t);
+
+        animRef.current.rotation.y = 0.03 * s * Math.sin(9.2 * t);
+    }
+  });
 
   return (
     <group position={basePos} rotation={baseRot}>
@@ -54,14 +80,16 @@ export function LanderClick() {
       </mesh>
 
       {/* Visual lander, independently positioned */}
-      <group position={landerOffset}>
-        <Lander scale={landerScale} />
+      <group ref={animRef} position={landerOffset}>
+        <Lander scale={hovered ? landerScale * 1.1 : landerScale} />
         {hovered && (
-          <OutlineShell scaleFactor={1.06}>
-            <Lander scale={landerScale} />
+          <OutlineShell scaleFactor={1.03}>
+            <Lander scale={hovered ? landerScale * 1.1 : landerScale} />
           </OutlineShell>
         )}
       </group>
     </group>
   );
 }
+
+
