@@ -40,6 +40,7 @@ Ideas:
 Moon model in the center with options around it as you rotate with stars or smthn in the background and the portfolio options can rotate with the moon and mouse and you can zoom into the surfacegit remote set-url origin https://github.com/YourUsername/YourRepo.git
 
 "zelda's moon" (https://skfb.ly/os8Sv) by Ulises Alvarado 3d is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+"Apollo Lunar Module" (https://skfb.ly/o7XBr) by OneBillionth LLC is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
 
 TODO:
 star constellations
