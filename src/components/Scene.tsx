@@ -25,7 +25,7 @@ export default function Scene() {
             radius={0.6} // Bloom radius.
           />
         </EffectComposer>
-        <CameraSwapper enabled={true} />
+        <CameraSwapper enabled={false} />
       </Canvas>
     </div>
   );

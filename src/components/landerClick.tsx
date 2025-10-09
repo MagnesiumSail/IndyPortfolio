@@ -3,7 +3,7 @@ import { useState, useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
 import { useCursor } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import CameraSwapper from "./cameraSwapper";
+import { camera } from "./cameraState";
 
 export function SimpleSmoke({ count = 10, origin = [0, 0, 0] }) {
   const groupRef = useRef<THREE.Group>(null!);
@@ -191,7 +191,18 @@ export function LanderClick() {
         }}
         onClick={(e) => {
           e.stopPropagation();
-          console.log("Lander clicked!");
+          camera.set({
+            target: [0, 10, -3],
+            azimuthRange: [-10, 10],
+            initialRadius: 28,
+            minRadius: 10,
+            maxRadius: 28,
+            azimuthOffset: 130,
+            elevationOffset: 40,
+            elevationRange: [-10, 15],
+            invertScroll: false,
+            smooth: { mouse: 4, radius: 6 }
+          });
         }}
       >
         <sphereGeometry args={[bubbleRadius, 16, 16]} />
