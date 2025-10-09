@@ -7,6 +7,19 @@ export default function CameraSwapper({ enabled }: { enabled: boolean }) {
   const [isEnabled, setIsEnabled] = useState(enabled);
 
   useEffect(() => {
+  // start at 0, 13, -3
+  camera.set({ target: [0, 13, -3] });
+
+  // switch to 0, 4, -3 after 15 seconds
+  const timeout = setTimeout(() => {
+    camera.set({ target: [0, 4, -3] });
+  }, 2500);
+
+  return () => clearTimeout(timeout);
+}, []);
+
+
+  useEffect(() => {
     window.addEventListener("keydown", (e) => {
       console.log("Key pressed:", e.key);
     });

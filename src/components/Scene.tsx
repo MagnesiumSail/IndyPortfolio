@@ -1,10 +1,11 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
-import { Moon } from "./moonObjects";
-import { LanderClick } from "./landerClick";
-import Stars from "./Stars";
+import { Moon } from "./objects/moonObjects";
+import { LanderClick } from "./clickables/landerClick";
+import starsScene from "./starField/starfieldGen";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import CameraSwapper from "./cameraSwapper";
+import StarsScene from "./starField/starfieldGen";
 
 export default function Scene() {
   return (
@@ -15,7 +16,7 @@ export default function Scene() {
         <directionalLight position={[10, 5, -10]} intensity={4} />
         <Moon />
         <LanderClick />
-        <Stars count={1200} radius={300} />
+      <StarsScene />
         <EffectComposer>
           <Bloom
             intensity={0.6} // The bloom intensity.

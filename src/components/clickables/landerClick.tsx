@@ -1,9 +1,9 @@
-import { Lander } from "./lander";
+import { Lander } from "../objects/landerObject";
 import { useState, useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
 import { useCursor } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { camera } from "./cameraState";
+import { camera } from "../cameraState";
 
 export function SimpleSmoke({ count = 10, origin = [0, 0, 0] }) {
   const groupRef = useRef<THREE.Group>(null!);
