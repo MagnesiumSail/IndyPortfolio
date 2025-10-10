@@ -53,7 +53,7 @@ export function ConstellationsRenderer({ stars, edges, opacity = 0.6 }: Props) {
     const m = new THREE.LineBasicMaterial({
       color: new THREE.Color("#b7e2ff"),
       transparent: true,
-      opacity: opacity * 1.35,
+      opacity: opacity * 0.35,
       blending: THREE.AdditiveBlending,
       depthWrite: false
     });

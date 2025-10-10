@@ -43,10 +43,8 @@ Moon model in the center with options around it as you rotate with stars or smth
 "Apollo Lunar Module" (https://skfb.ly/o7XBr) by OneBillionth LLC is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
 
 TODO:
-star constellations
 maybe make stars a particle field
-(selectable) objects on moon
 moon material/color
 maybe different moon model (prob not this thing is great)
-selectables
-pan camera to stars behind camera for different projects menus or smthn
+exclusion zone for name 
+have constellations animate outward

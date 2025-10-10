@@ -192,7 +192,7 @@ export function LanderClick() {
         onClick={(e) => {
           e.stopPropagation();
           camera.set({
-            target: [0, 10, -3],
+            target: [0, 13, -3],
             azimuthRange: [-10, 10],
             initialRadius: 28,
             minRadius: 10,
