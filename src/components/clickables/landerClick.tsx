@@ -192,15 +192,15 @@ export function LanderClick() {
         onClick={(e) => {
           e.stopPropagation();
           camera.set({
-            target: [0, 13, -3],
-            azimuthRange: [-10, 10],
-            initialRadius: 28,
-            minRadius: 10,
-            maxRadius: 28,
+            target: [0, 32, -75],
+            azimuthRange: [-0.3, 0.3],
+            initialRadius: 50,
+            minRadius: 49.8,
+            maxRadius: 50.2,
             azimuthOffset: 130,
             elevationOffset: 40,
-            elevationRange: [-10, 15],
-            invertScroll: false,
+            elevationRange: [-0.3, 0.3],
+            invertScroll: true,
             smooth: { mouse: 4, radius: 6 }
           });
         }}

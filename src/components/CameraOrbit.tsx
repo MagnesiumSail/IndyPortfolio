@@ -174,6 +174,7 @@ export default function CameraOrbit({
     const z = r * Math.cos(el) * Math.cos(az);
 
     cam.current.position.set(x, y, z);
+    console.log(cam.current.position);
     cam.current.lookAt(lookTarget.current);
   });
 
