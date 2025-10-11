@@ -11,10 +11,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "olipopper",
-    title: "Olipopper Studios",
+    title: "Olipopper Studios 🔗",
     blurb: "Full-stack e-commerce (Next.js, TS, Tailwind, Postgres).",
     image: "",
-    href: "https://example.com",
+    href: "https://olipopperstudios.com",
     tech: ["Next.js","TS","Postgres"]
   },
   {
@@ -24,5 +24,4 @@ export const projects: Project[] = [
     image: "",
     tech: ["Prisma","NextAuth"]
   }
-  // add more by appending objects
 ];

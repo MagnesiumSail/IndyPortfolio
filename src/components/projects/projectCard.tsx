@@ -1,8 +1,8 @@
 // components/ProjectCard.tsx
 "use client";
 import * as THREE from "three";
-import { Text, Image } from "@react-three/drei";
-import { useMemo } from "react";
+import { Text, Image, useCursor } from "@react-three/drei";
+import { useMemo, useState } from "react";
 import type { Project } from "./projects";
 
 type Props = {
@@ -12,6 +12,8 @@ type Props = {
 
 export default function ProjectCard({ project, size = [6, 3.6] }: Props) {
   const [w, h] = size;
+  const [hovered, setHovered] = useState(false);
+  useCursor(hovered);
 
   const bgMat = useMemo(
     () =>
@@ -90,6 +92,11 @@ export default function ProjectCard({ project, size = [6, 3.6] }: Props) {
         onClick={() => {
           if (project.href) window.open(project.href, "_blank");
         }}
+        onPointerOver={(e) => {
+          e.stopPropagation();
+          setHovered(true);
+        }}
+        onPointerOut={() => setHovered(false)}
         visible={false}
       >
         <planeGeometry args={[w, h]} />
