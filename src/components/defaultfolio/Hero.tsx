@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="relative mt-12">
         <div className="rounded-full border-2 border-[#63C697]/40 p-2 shadow-[0_0_20px_rgba(99,198,151,0.2)]">
           <Image
-            src="/pic.jpg"
+            src="/profile.jpg"
             alt="Profile Picture"
             width={220}
             height={220}

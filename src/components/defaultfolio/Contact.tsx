@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function Contact() {
   return (
@@ -11,8 +11,9 @@ export default function Contact() {
       </h2>
 
       <p className="max-w-2xl text-gray-400 mb-10">
-        I'm always open to new opportunities, collaborations, and conversations. Whether you want to discuss
-        a project, share ideas, or just say hi — feel free to reach out.
+        I'm always open to new opportunities, collaborations, and conversations.
+        Whether you want to discuss a project, share ideas, or just say hi —
+        feel free to reach out.
       </p>
 
       <form
@@ -45,14 +46,16 @@ export default function Contact() {
         </button>
       </form>
 
-      <p className="text-gray-500 text-sm mt-8">
-        Or email me directly at{' '}
-        <a
-          href="mailto:contact@sail.dev"
-          className="text-[#63C697] hover:underline"
-        >
-          contact@sail.dev
-        </a>
+      <p className="text-gray-500 text-sm mt-8 mb-1 md:mb-10 lg:mb-15">
+        <span className="inline-flex items-center gap-1 bg-white/10 rounded-full px-2 py-1 align-middle">
+          Or email me directly at{" "}
+          <a
+            href="mailto:contact@sail.dev"
+            className="text-[#63C697] hover:underline focus:outline-none focus:ring-2 focus:ring-[#63C697]/40 rounded-sm"
+          >
+            contact@sail.dev
+          </a>
+        </span>
       </p>
     </section>
   );
