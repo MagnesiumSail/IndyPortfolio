@@ -12,7 +12,7 @@ export default function Contact() {
 
       <p className="max-w-2xl text-gray-400 mb-10">
         I'm always open to new opportunities, collaborations, and conversations.
-        Whether you want to discuss a project, share ideas, or just say hi —
+        Whether you want to discuss a project, share ideas, or just say hi -
         feel free to reach out.
       </p>
 
