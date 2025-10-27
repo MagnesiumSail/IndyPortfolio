@@ -15,10 +15,10 @@ export default function Hero() {
         Software Engineer
       </span>
       <h1 className="text-4xl sm:text-6xl font-bold text-white leading-tight mb-4">
-        Hi, I'm <span className="text-[#63C697]">Sail</span>
+        Hi, I'm <span className="text-[#63C697]">Indy</span>
       </h1>
       <p className="text-gray-400 max-w-xl mb-8">
-        I build fast, reliable, and visually cohesive web experiences. Simple, effective, and user-focused.
+        I build beautiful, reliable, and cohesive web experiences. Simple, effective, and user-focused.
       </p>
 
       {/* Call to action */}

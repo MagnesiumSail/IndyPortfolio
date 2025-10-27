@@ -1,28 +1,34 @@
 export default function Projects() {
   const projects = [
     {
-      title: 'Olipopper Studios',
+      title: "Olipopper Studios",
       description:
-        'A full-scale e-commerce platform for custom clothing built with Next.js, Tailwind, and PostgreSQL. Includes admin tools, product management, and SEO optimization.',
-      tech: ['Next.js', 'TypeScript', 'PostgreSQL'],
-      link: '#',
-      github: '#',
+        "A full-scale e-commerce platform for custom clothing built for a client with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL. Features include an admin dashboard, order and product management, Stripe payments, Resend emails, and image uploads via Uploadthing. Designed as a polished production-ready MVP for a real small business.",
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Prisma",
+        "PostgreSQL",
+        "Stripe",
+      ],
+      link: "https://www.olipopperstudios.com/",
+      github: "https://github.com/MagnesiumSail/OlipopperStudios",
     },
     {
-      title: 'StreakTracker',
+      title: "BoatDealsDirect",
       description:
-        'A minimalist web app that tracks user consistency through streaks, gamifying productivity while maintaining clean data models and user authentication.',
-      tech: ['React', 'Prisma', 'Node.js'],
-      link: '#',
-      github: '#',
+        "A marketplace web app for buying and selling boats, built during my internship using WordPress, Elementor, GeoDirectory, and Gravity Forms. Integrated advanced search filters, dynamic map listings, and user submission workflows while optimizing performance and UX within WordPress constraints.",
+      tech: ["WordPress", "Elementor", "GeoDirectory", "Gravity Forms", "PHP"],
+      link: "https://boatdealsdirect.com/",
     },
     {
-      title: 'Indie Game Engine',
+      title: "Three.js Portfolio",
       description:
-        'An experimental 2D engine prototype for pixel-based worlds with flexible entity systems and input control layers.',
-      tech: ['JavaScript', 'Canvas API'],
-      link: '#',
-      github: '#',
+        "A personal portfolio site built with Next.js, React-Three-Fiber, and custom GLSL shaders. Features a 3D starfield skybox, parallax camera motion, and dynamic gradients to blend design and performance. Serves as both a creative expression exploration and a technical demonstration of real-time rendering in React.",
+      tech: ["Next.js", "React-Three-Fiber", "GLSL", "TypeScript", "Tailwind"],
+      link: "#",
+      github: "https://github.com/MagnesiumSail/IndyPortfolio",
     },
   ];
 
@@ -33,7 +39,8 @@ export default function Projects() {
           My <span className="text-[#63C697]">Projects</span>
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto">
-          A few examples of things I’ve built — from production-ready apps to creative experiments.
+          A few examples of things I've built — from production-ready apps to
+          creative experiments.
         </p>
       </div>
 
@@ -43,7 +50,9 @@ export default function Projects() {
             key={index}
             className="bg-[#1c1f26] border border-[#63C697]/20 rounded-lg p-6 text-left transition-transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(99,198,151,0.2)]"
           >
-            <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {project.title}
+            </h3>
             <p className="text-gray-400 text-sm mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.map((tech, i) => (
@@ -56,7 +65,8 @@ export default function Projects() {
               ))}
             </div>
             <div className="flex gap-4 text-sm">
-              <a
+              {project.link && (
+                <a
                 href={project.link}
                 className="hover:text-[#63C697] transition-colors"
                 target="_blank"
@@ -64,14 +74,17 @@ export default function Projects() {
               >
                 Live
               </a>
-              <a
-                href={project.github}
-                className="hover:text-[#63C697] transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  className="hover:text-[#63C697] transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              )}
             </div>
           </div>
         ))}

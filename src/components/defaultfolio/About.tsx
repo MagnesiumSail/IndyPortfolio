@@ -9,10 +9,10 @@ export default function About() {
       </h2>
 
       <p className="max-w-2xl text-gray-400 leading-relaxed mb-8">
-        I'm Sail — a software engineer who thrives at the intersection of creativity and logic. I enjoy
-        building reliable systems, designing cohesive interfaces, and solving problems with clean, readable code.
-        Whether it's crafting full-stack web applications or experimenting with indie game mechanics,
-        I value elegance, function, and learning something new every day.
+        I'm Indiana Brown — a software engineer specializing in full-stack web development. I enjoy
+        building reliable systems, designing user-first interfaces, and solving problems with optimized code.
+        Whether it's crafting backend web applications or experimenting with modern frontend frameworks,
+        I value elegance, function, and learning something new every day for my toolbox.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-lg text-sm">
@@ -22,11 +22,11 @@ export default function About() {
         </div>
         <div className="bg-[#1c1f26] rounded-lg p-4 border border-[#63C697]/20">
           <p className="font-semibold text-[#63C697] mb-1">Backend</p>
-          <p className="text-gray-400">Node.js · Express · SQL</p>
+          <p className="text-gray-400">Node.js · SQL · Prisma</p>
         </div>
         <div className="bg-[#1c1f26] rounded-lg p-4 border border-[#63C697]/20">
           <p className="font-semibold text-[#63C697] mb-1">Tools</p>
-          <p className="text-gray-400">Prisma · Git · Docker</p>
+          <p className="text-gray-400">Git · Vercel · Stripe</p>
         </div>
       </div>
     </section>

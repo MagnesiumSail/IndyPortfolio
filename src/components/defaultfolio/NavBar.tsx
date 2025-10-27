@@ -22,7 +22,7 @@ export default function NavBar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6">
         {/* Logo / Name */}
         <Link href="#home" className="font-semibold text-lg tracking-wide text-[#63C697]">
-          Sail
+          Indiana Brown
         </Link>
 
         {/* Navigation Links */}
