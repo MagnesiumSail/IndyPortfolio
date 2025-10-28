@@ -19,6 +19,37 @@
   }
 }
 
+@layer base {
+  /* Default mobile baseline */
+  html {
+    font-size: 100%; /* 16px — avoids text overflow on small phones */
+  }
+  
+
+  /* Tablets / small laptops */
+  @media (min-width: 640px) {
+    html {
+      font-size: 125%; /* ~20px */
+    }
+  }
+
+  /* Large laptops / small desktops */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 150%; /* ~24px */
+    }
+  }
+
+  /* Full desktop and beyond */
+  @media (min-width: 1440px) {
+    html {
+      font-size: 170%; /* ~27px, matches your “perfect” look */
+    }
+  }
+}
+
+
+
 body {
   background: var(--background);
   color: var(--foreground);

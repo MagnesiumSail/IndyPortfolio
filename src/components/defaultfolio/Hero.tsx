@@ -2,10 +2,19 @@ import Image from 'next/image';
 import React from 'react';
 
 export default function Hero() {
-  return (
+  return  (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-[#0f1115] relative"
+      className="
+        relative flex flex-col items-center text-center px-6 bg-[#0f1115]
+        min-h-[calc(100svh-var(--header-h,72px))]
+        pt-[var(--header-h,92px)]
+        pb-[clamp(48px,12svh,160px)]
+        justify-end sm:justify-center
+        sm:pt-[calc(var(--header-h,172px)+1rem)] /* restore breathing room on larger screens */
+        sm:pb-[10svh]                            /* balanced on tablets/desktops */
+        scroll-mt-[var(--header-h,72px)]
+      "
     >
       {/* Subtle glow background */}
       <div className="absolute inset-0 bg-gradient-radial from-[#63C697]/10 via-transparent to-transparent pointer-events-none"></div>
@@ -35,8 +44,8 @@ export default function Hero() {
           <Image
             src="/profile.jpg"
             alt="Profile Picture"
-            width={220}
-            height={220}
+            width={420}
+            height={420}
             className="rounded-full object-cover"
           />
         </div>
