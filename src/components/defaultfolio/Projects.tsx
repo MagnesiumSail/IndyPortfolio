@@ -24,6 +24,7 @@ export default function Projects() {
     },
     {
       title: "Three.js Portfolio",
+      WiP: true,
       description:
         "A personal portfolio site built with Next.js, React-Three-Fiber, and custom GLSL shaders. Features a 3D starfield skybox, parallax camera motion, and dynamic gradients to blend design and performance. Serves as both a creative expression exploration and a technical demonstration of real-time rendering in React.",
       tech: ["Next.js", "React-Three-Fiber", "GLSL", "TypeScript", "Tailwind"],
@@ -48,8 +49,13 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-[#1c1f26] border border-[#63C697]/20 rounded-lg p-6 text-left transition-transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(99,198,151,0.2)]"
+            className="relative bg-[#1c1f26] border border-[#63C697]/20 rounded-lg p-6 text-left transition-transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(99,198,151,0.2)]"
           >
+            {project.WiP && (
+              <span className="absolute top-2 right-2 bg-[#63C697] text-black text-xs font-semibold py-1 px-2 rounded">
+                Current WiP
+              </span>
+            )}
             <h3 className="text-xl font-semibold text-white mb-2">
               {project.title}
             </h3>
@@ -67,13 +73,13 @@ export default function Projects() {
             <div className="flex gap-4 text-sm">
               {project.link && (
                 <a
-                href={project.link}
-                className="hover:text-[#63C697] transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live
-              </a>
+                  href={project.link}
+                  className="hover:text-[#63C697] transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>
               )}
               {project.github && (
                 <a
