@@ -9,7 +9,7 @@ export default function About() {
       </h2>
 
       <p className="max-w-2xl text-gray-400 leading-relaxed mb-8">
-        I'm Indiana Brown — a software engineer specializing in full-stack web development. I enjoy
+        I'm Indiana Brown - a software engineer specializing in full-stack web development. I enjoy
         building reliable systems, designing user-first interfaces, and solving problems with optimized code.
         Whether it's crafting backend web applications or experimenting with modern frontend frameworks,
         I value elegance, function, and learning something new every day for my toolbox.

@@ -36,6 +36,9 @@ export default function NavBar() {
           <a href="#contact" className="hover:text-[#63C697] transition-colors">
             Contact
           </a>
+          <a href="/experience" className="hover:text-[#63C697] transition-colors">
+            3D Experience
+          </a>
         </nav>
 
         {/* Mobile Menu */}

@@ -12,7 +12,7 @@ import ProjectWall from "./projects/projectWall";
 export default function Scene() {
   return (
     <div className="App">
-      <Canvas style={{ width: "99vw", height: "99vh" }}>
+      <Canvas style={{ width: "99.8vw", height: "99.7vh" }}>
         <color attach="background" args={["black"]} />
         <ambientLight intensity={0.2} />
         <directionalLight position={[10, 5, -10]} intensity={4} />

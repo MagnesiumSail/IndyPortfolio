@@ -22,7 +22,7 @@
 @layer base {
   /* Default mobile baseline */
   html {
-    font-size: 100%; /* 16px — avoids text overflow on small phones */
+    font-size: 110%; /* 16px — avoids text overflow on small phones */
   }
   
 
@@ -36,14 +36,14 @@
   /* Large laptops / small desktops */
   @media (min-width: 1024px) {
     html {
-      font-size: 150%; /* ~24px */
+      font-size: 130%; /* ~24px */
     }
   }
 
   /* Full desktop and beyond */
   @media (min-width: 1440px) {
     html {
-      font-size: 170%; /* ~27px, matches your “perfect” look */
+      font-size: 150%; /* ~27px, matches your “perfect” look */
     }
   }
 }

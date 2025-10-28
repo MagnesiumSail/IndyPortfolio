@@ -48,3 +48,5 @@ moon material/color
 maybe different moon model (prob not this thing is great)
 exclusion zone for name 
 have constellations animate outward
+mobile view hamburger menu
+back to main site button on threejs
