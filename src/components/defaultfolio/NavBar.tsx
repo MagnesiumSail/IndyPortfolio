@@ -49,7 +49,7 @@ export default function NavBar() {
           <a href="#about" className="hover:text-[#63C697] transition-colors">About</a>
           <a href="#projects" className="hover:text-[#63C697] transition-colors">Projects</a>
           <a href="#contact" className="hover:text-[#63C697] transition-colors">Contact</a>
-          <a href="https://drive.google.com/file/d/10beJ8D14ow33x-1CwqOJcffrCiKDab7J/view?usp=sharing" className="hover:text-[#63C697] transition-colors">Resume</a>
+          <a href="https://drive.google.com/file/d/10beJ8D14ow33x-1CwqOJcffrCiKDab7J/view?usp=sharing" target="_blank" className="hover:text-[#63C697] transition-colors">Resume</a>
         </nav>
 
         {/* Mobile toggle */}
