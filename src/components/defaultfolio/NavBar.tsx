@@ -78,7 +78,7 @@ export default function NavBar() {
             <li><a href="#about" onClick={closeMenu} className="block hover:text-[#63C697]">About</a></li>
             <li><a href="#projects" onClick={closeMenu} className="block hover:text-[#63C697]">Projects</a></li>
             <li><a href="#contact" onClick={closeMenu} className="block hover:text-[#63C697]">Contact</a></li>
-            <li><Link href="/experience" onClick={closeMenu} className="block hover:text-[#63C697]">3D Experience</Link></li>
+            <li><Link href="https://drive.google.com/file/d/10beJ8D14ow33x-1CwqOJcffrCiKDab7J/view?usp=sharing" onClick={closeMenu} target="_blank" className="block hover:text-[#63C697]">Resume</Link></li>
           </ul>
         </nav>
       </div>

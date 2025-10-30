@@ -28,7 +28,7 @@ export default function Projects() {
       description:
         "A personal portfolio site built with Next.js, React-Three-Fiber, and custom GLSL shaders. Features a 3D starfield skybox, parallax camera motion, and dynamic gradients to blend design and performance. Serves as both a creative expression exploration and a technical demonstration of real-time rendering in React.",
       tech: ["Next.js", "React-Three-Fiber", "GLSL", "TypeScript", "Tailwind"],
-      link: "#",
+      link: "/experience",
       github: "https://github.com/MagnesiumSail/IndyPortfolio",
     },
   ];
